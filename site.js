@@ -46,7 +46,7 @@ async function singleproduct(myid) {
         </div>
         <div class="product_right">
             <h2>${myProduct.title}</h2>
-            <div class="rating">${myProduct.rating}</div>
+            <div class="rating"><img src="https://res.cloudinary.com/dtrvdcebd/image/upload/v1708266043/Clothy/uhlym2mrhob6aoklzd0h.png" alt="">${myProduct.rating}</div>
         </div>
         <div class="single_prices">
             <span class="offprice">$ ${myProduct.price}</span>
@@ -117,7 +117,7 @@ async function productList() {
               <span class="offprice">$ ${product.price}</span>
               <span class="price"> $ ${product.price}</span>
           </div>
-          <img src="starts" alt="" class="stars">
+          <img src="https://res.cloudinary.com/dtrvdcebd/image/upload/v1708266043/Clothy/uhlym2mrhob6aoklzd0h.png" alt="" class="stars">
       </div>
       
       `;
