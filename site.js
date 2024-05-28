@@ -42,7 +42,7 @@ async function singleproduct(myid) {
             <div class="category">
                 ${myProduct.category}
             </div>
-            <img src="${myProduct.image}" alt="">
+            <img src="${myProduct.image}" alt="" id="produit-img">
         </div>
         <div class="product_right">
             <h2>${myProduct.title}</h2>
@@ -86,7 +86,6 @@ async function singleproduct(myid) {
 
 
 
-
 /**fetch products list */
 
 async function productList() {
@@ -104,22 +103,25 @@ async function productList() {
       let productElement = document.createElement("div");
       productElement.setAttribute("class", "shop_item");
       productElement.innerHTML = `
+      <a href="singleproduct.html?id=${product.id}" class="element-link">
       <div class="top">
           <span class="elementCategory">${product.category}</span>
           <botton class="buyElementBtn"><img
           src="https://res.cloudinary.com/dtrvdcebd/image/upload/v1708266043/Clothy/q1pbhfwzuy1u8xqq6cbd.png"
                   alt="add to cart"></botton>
       </div>
-      <div class="product_image_container"><img src="${product.image}" alt=""></div>
-      <h6><a href="singleproduct.html?id=${product.id}">${product.title}<a></h6>
+      <div class="product_image_container"><img src="${product.image}" alt="" class="product_image"></div>
+      <h6>${product.title}</h6>
       <div class="element_footer">
+      <div class="p-r">
           <div class="prices">
               <span class="offprice">$ ${product.price}</span>
               <span class="price"> $ ${product.price}</span>
-          </div>
+              </div>
           <img src="https://res.cloudinary.com/dtrvdcebd/image/upload/v1708266043/Clothy/uhlym2mrhob6aoklzd0h.png" alt="" class="stars">
-      </div>
-      
+          </div>
+          </div>
+      <a>
       `;
       
           document.getElementById("shopItems").appendChild(productElement);
